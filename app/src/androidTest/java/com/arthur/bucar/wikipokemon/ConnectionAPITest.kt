@@ -18,6 +18,5 @@ class ConnectionAPITest {
         if (result != null) {
             Assert.assertFalse(result)
         }
-
     }
 }
