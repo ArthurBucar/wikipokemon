@@ -35,8 +35,8 @@ Este é um pequeno projeto em Kotlin que recebe uma API (https://pokeapi.co/) li
 
 ## A Fazer
 
-- [ ] Improve layout
-- [ ] Add Pokemon evolution
+- [ ] Melhorar layout
+- [ ] Adicionar evolução do Pokémon
 - [ ] Mais testes Unitários
 - [ ] Criação de um Webhook para salvar os Pokemons favoritos
 
