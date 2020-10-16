@@ -1,7 +1,6 @@
 package com.arthur.bucar.wikipokemon
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import com.arthur.bucar.wikipokemon.connection.monitor.PokemonDetailMonitor
 import org.junit.Assert
 import org.junit.Test
