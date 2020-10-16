@@ -9,12 +9,12 @@ import com.arthur.bucar.wikipokemon.R
 import com.arthur.bucar.wikipokemon.model.Pokemon
 import kotlinx.android.synthetic.main.item_pokemon.view.*
 
-class PoListAdapter(
+class PokemonListAdapterRv(
     private val dataList: ArrayList<Pokemon>,
     private val context: Context,
     private val listener: PokemonListener
 ) :
-    RecyclerView.Adapter<PoListAdapter.ViewHolder>() {
+    RecyclerView.Adapter<PokemonListAdapterRv.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_pokemon, parent, false))

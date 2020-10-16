@@ -5,7 +5,7 @@ import com.arthur.bucar.wikipokemon.model.Sprite
 import com.google.gson.annotations.SerializedName
 import com.arthur.bucar.wikipokemon.model.Ability
 
-class PoDetailResponse : BaseResponse() {
+class PokemonDetailResponse : BaseResponse() {
 
     @SerializedName("id")
     var id: Int? = null

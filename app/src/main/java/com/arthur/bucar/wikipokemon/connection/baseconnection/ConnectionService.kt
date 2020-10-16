@@ -9,9 +9,9 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ConnectionService {
-    private var service: PoAPI? = null
+    private var service: PokemonAPI? = null
 
-    fun service(): PoAPI? {
+    fun service(): PokemonAPI? {
         val httpClient = OkHttpClient.Builder()
 
         if (BuildConfig.DEBUG) {
@@ -29,7 +29,7 @@ object ConnectionService {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
-            service = retrofit.create(PoAPI::class.java)
+            service = retrofit.create(PokemonAPI::class.java)
         }
 
         return service

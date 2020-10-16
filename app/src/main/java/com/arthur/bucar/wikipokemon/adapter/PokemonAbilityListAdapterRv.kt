@@ -6,17 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.arthur.bucar.wikipokemon.R
-import com.arthur.bucar.wikipokemon.model.Move
-import kotlinx.android.synthetic.main.item_move.view.*
+import com.arthur.bucar.wikipokemon.model.Ability
+import kotlinx.android.synthetic.main.item_ability.view.*
 
-class PoMoveListAdapter(
-    private val dataList: ArrayList<Move>,
+class PokemonAbilityListAdapterRv(
+    private val dataList: ArrayList<Ability>,
     private val context: Context
 ) :
-    RecyclerView.Adapter<PoMoveListAdapter.ViewHolder>() {
+    RecyclerView.Adapter<PokemonAbilityListAdapterRv.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_move, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_ability, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -24,10 +24,10 @@ class PoMoveListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = dataList[position].move?.name
+        holder.name.text = dataList[position].ability?.name
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name = itemView.tvMoveName!!
+        val name = itemView.tvAbilityName!!
     }
 }

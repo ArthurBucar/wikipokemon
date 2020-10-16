@@ -11,9 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.arthur.bucar.wikipokemon.view.polist.PokemonListActivity;
+import com.arthur.bucar.wikipokemon.view.pokemonlist.PokemonListActivity;
 
-public class SpashScreen extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
 
     private  static  int SPLASH_SCREEN = 5000;
 
@@ -42,7 +42,7 @@ public class SpashScreen extends AppCompatActivity {
         {
             @Override
             public void run() {
-                Intent intent = new Intent(SpashScreen.this, PokemonListActivity.class);
+                Intent intent = new Intent(SplashScreen.this, PokemonListActivity.class);
                 startActivity(intent);
                 finish();
             }
