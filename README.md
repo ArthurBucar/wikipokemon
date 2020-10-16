@@ -15,4 +15,4 @@ Projeto bem básico com uma SplashScreen e Duas Activities:
 1 - Primeira Lista os Pokemons
 2 - Lista a foto e a Habilidade do Pokemon
 
-![gif_pokemon_reame-min](https://user-images.githubusercontent.com/16179019/96261136-693c4280-0f96-11eb-8a89-baf3b183dd1e.gif")
+![gif_pokemon_reame-min](https://user-images.githubusercontent.com/16179019/96261136-693c4280-0f96-11eb-8a89-baf3b183dd1e.gif)
