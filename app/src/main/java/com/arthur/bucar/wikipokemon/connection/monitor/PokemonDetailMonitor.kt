@@ -19,9 +19,7 @@ class PokemonDetailMonitor(private var listener: PokemonDetailInteractor.Pokemon
     }
 
     fun testConnection(): Boolean {
-        if (errorMessage != null){
-            myRateConnection = true
-        }
+        myRateConnection = true
         return myRateConnection
     }
 
