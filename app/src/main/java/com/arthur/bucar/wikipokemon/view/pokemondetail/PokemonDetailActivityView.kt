@@ -2,18 +2,19 @@ package com.arthur.bucar.wikipokemon.view.pokemondetail
 
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.arthur.bucar.wikipokemon.R
 import com.arthur.bucar.wikipokemon.adapter.PokemonAbilityListAdapterRv
 import com.arthur.bucar.wikipokemon.adapter.PokemonMoveListAdapterRv
-import com.daimajia.androidanimations.library.Techniques
-import com.daimajia.androidanimations.library.YoYo
-import com.arthur.bucar.wikipokemon.model.Ability
 import com.arthur.bucar.wikipokemon.connection.response.PokemonDetailResponse
+import com.arthur.bucar.wikipokemon.model.Ability
 import com.arthur.bucar.wikipokemon.model.Move
 import com.arthur.bucar.wikipokemon.view.core.CoreActivity
 import com.arthur.bucar.wikipokemon.view.pokemonlist.KEY_NAME
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_pokemon_detail.*
 
@@ -25,6 +26,11 @@ class PokemonDetailActivityView : CoreActivity(), PokemonDetailView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokemon_detail)
+
+        val actionBar = supportActionBar!!
+        actionBar.setHomeButtonEnabled(true)
+        actionBar.setDisplayHomeAsUpEnabled(true)
+
         pokemonName = intent.getStringExtra(KEY_NAME)
 
         presenter = PokemonDetailPresenterImpl(this, PokemonDetailInteractorImpl())
@@ -73,5 +79,13 @@ class PokemonDetailActivityView : CoreActivity(), PokemonDetailView {
 
     override fun showErrorMessage(errorMessage: String) {
         Log.e("error", "errorMessage: $errorMessage")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

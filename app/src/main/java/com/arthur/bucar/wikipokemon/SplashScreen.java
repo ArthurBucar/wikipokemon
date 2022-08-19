@@ -1,10 +1,12 @@
 package com.arthur.bucar.wikipokemon;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -18,25 +20,25 @@ public class SplashScreen extends AppCompatActivity {
     private  static  int SPLASH_SCREEN = 5000;
 
     ImageView imageView;
-    TextView textView1, textView2;
+    TextView txTitle, txHint;
     Animation top, bottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.spash_screen);
 
         imageView = findViewById(R.id.imageView);
-        textView1 = findViewById(R.id.textView);
-        textView2 = findViewById(R.id.textView2);
+        txTitle = findViewById(R.id.textViewTitle);
+        txHint = findViewById(R.id.textViewHint);
 
 
         top = AnimationUtils.loadAnimation(this, R.anim.top);
         bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);
         imageView.setAnimation(top);
-        textView1.setAnimation(bottom);
-        textView2.setAnimation(bottom);
+        txHint.setAnimation(bottom);
+        txHint.setAnimation(bottom);
 
         new Handler().postDelayed(new Runnable()
         {

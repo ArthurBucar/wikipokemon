@@ -16,7 +16,7 @@ import java.net.SocketTimeoutException
 open class BaseMonitor<T : BaseResponse> : Observer<T> {
     override fun onError(e: Throwable) {
         if (!TextUtils.isEmpty(e.message)) {
-            Log.e(javaClass.name, e.message)
+            e.message?.let { Log.e(javaClass.name, it) }
         }
 
         errorMessage = "Error Unexpected"
